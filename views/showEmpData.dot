@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title]]</title>
+    <script src="/javascripts/jquery.js"></script>
+       <script type="text/javascripts" src="/javascripts/bootstrap.js"></script>
+       <link rel="stylesheet" type="text/css" href="/stylesheets/min.css">
+  </head>
+  <body>
+  
+  <div class="container">
+  <h3>Employee Details!! </h3>
+  <br>
+  <br>
+  <table class="table table-bordered">
+       <th >Id</th>
+       <th >Firstname</th>
+       <th >Lastname</th>
+       <th >Username</th>
+       <th >Password</th>
+       <th >Action1</th>
+       <th >Action2</th>
+  </tr>
+      [[~ model.result:temp]]
+  <tr>
+ 
+    <td class="success">[[=temp.id]]</td>
+    <td class="danger">[[=temp.firstName]]</td>
+    <td class="info">[[=temp.lastName]]</td>
+    <td class="warning">[[=temp.username]]</td>
+    <td class="active">[[= temp.password]]</td>
+    <td><a class="btn btn-success"  href="showEmpData/updateProfile?id=[[=temp.id]]">Update Details</a></td>
+    <td><button class="btnDelete  btn btn-danger" buttonId=[[=temp.id]]>Delete Profile</button></td>
+  </tr>
+  [[~]]
+ 
+</table>
+
+    <br>
+    <br>
+    </div>
+    
+
+  <script>
+  $(document).ready(function(){
+    $(".btnDelete").click(function(){
+      console.log('Inside Jquery');
+      let userId= $(this).attr('buttonId');
+      let that=this;
+      $.ajax({
+        url: 'showEmpData/deleteProfile',
+        type: 'post',
+        data: {id:userId},
+        success: function(response){
+          console.log('this is button id',this);
+          alert('Row Deleted Successfully ');
+          $(that).closest('tr').remove();
+          console.log('Data',response);
+        },
+        fail: function(error){
+          console.log('Error',error);
+        }
+
+      })
+    })
+  })
+
+   
+  </script>
+
+
+  </body>
+  </html>

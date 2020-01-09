@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title ]]</title>
+        <script type="text/javascripts" src="/javascripts/bootstrap.js"></script>
+       <link rel="stylesheet" type="text/css" href="/stylesheets/min.css">
+  </head>
+  <body>
+
+
+
+    <div class="container" style="background-color:#96c8a2">
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">LOGIN WITH ROLE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+
+     
+    </ul>
+  </div>
+</nav>
+  
+    <form action="/home/login" method="post">
+    <legend><mark>Login Here:</mark></legend>
+      <div class="row-md-8">
+              <div class="col-md-4">
+              <p style="font-size:20px">Username:</p>
+              <input type="text" name="username" required class="form-control" style="font-size:20px"><br><br>
+              </div>
+              <div class="col-md-4">
+              <p style="font-size:20px">Password:</p>
+              <input type="password" name="password" required class="form-control" style="font-size:20px"><br><br>
+              </div>
+     </div> 
+
+     <br><br>
+    <button class="btn btn-warning" type="submit">Submit</button>
+    </form>
+    </div>
+
+  </body>
+  </html>

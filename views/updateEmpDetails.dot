@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title ]]</title>
+            <script type="text/javascripts" src="/javascripts/bootstrap.js"></script>
+           <link rel="stylesheet" type="text/css" href="/stylesheets/min.css">
+  </head>
+  <body>
+  <div class="container" style="background-color:silver;margin-top:50px">
+        <form action="saveProfile" method="post">
+                    
+                      
+              <input type="hidden" class="form-control" style="font-size:20px"  value="[[=model.result.id]]" name="id">             
+             
+
+           <div class="row">
+               <div class="col-md-5">
+                       <p style="font-size:20px">First name:</p>
+                       <input type="text" class="form-control" style="font-size:20px"  value="[[=model.result.firstName]]" name="firstName">
+               </div>  
+               <div class="col-md-5">
+                       <p style="font-size:20px">Last name:</p>
+                       <input type="text" class="form-control"  style="font-size:20px"  value="[[=model.result.lastName]]" name="lastName">
+               </div>     
+          </div>
+           <br>
+                <div class="row">
+                    <div class="col-md-5">
+                       <p style="font-size:20px">Username:</p>
+                       <input type="text" class="form-control"  style="font-size:20px" value="[[=model.result.username]]" name="username">
+                   </div>
+                   <div class="col-md-5">
+                        <p style="font-size:20px">Password:</p>
+                       <input type="text" class="form-control" style="font-size:20px" value="[[=model.result.password]]" name="password">
+                    </div>     
+               </div>
+               <br>
+       <br><br>
+       <div class="row">
+          <div class="col-md-5">
+           <input type="submit" class="saveBtn btn btn-success" value="Save Profile"> 
+           <button class="btn btn-primary">Edit Details</button>
+            </div>
+        </div>
+        </form>
+  <div>
+
+  <script>
+
+    $(document).ready(function(){
+           $('.savebtn').click(function(){
+             alert('Details Saved Successfully!');
+           })
+    })
+
+  </script>
+
+
+
+
+
+
+  </body>
+  </html>
+

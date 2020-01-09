@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title ]]</title>
+  </head>
+  <body>
+  <center>
+  <div style="width:400px;height:auto;border-radius:5px;background-color:dodgerblue;margin-top:100px;">
+  <h1>Registration Done!! </h1>
+  <h2><a href="/login">Go to Login</a></h2>
+    <br>
+    <br>
+    </div>
+    </center>
+  </body>
+  </html>

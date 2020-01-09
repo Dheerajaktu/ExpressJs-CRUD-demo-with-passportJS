@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title ]]</title>
+
+       <script type="text/javascripts" src="/javascripts/bootstrap.js"></script>
+       <link rel="stylesheet" type="text/css" href="/stylesheets/min.css">
+     
+  </head>
+  <body>
+  
+  
+<div class="container" style="background-color: #c4aead">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">DEMO PROJECT</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/login">Login With Role</a></li>
+      <li><a href="/registerWithEmp">Register with Employee</a></li>
+      <li><a href="/registerWithEmp/loginWithEmp">Login with Employee</a></li>
+      
+    </ul>
+  </div>
+</nav>
+  
+  <div  style="height:auto;border-radius:5px;background-color:red;margin-top:100px;">
+ 
+    <form action="home/register" method="post">
+    
+        <div class="row-md-12">
+            <div class="col-md-6">
+                  <p style="font-size:20px">First name:</p>
+                  <input type="text" name="firstName" class="form-control" required style="font-size:20px"><br><br>
+              </div>     
+              <div class="col-md-6">  
+                  <p style="font-size:20px">Last name:</p>
+                   <input type="text" name="lastName" class="form-control" style="font-size:20px" required><br><br>
+              </div>
+          </div>   
+
+
+           <div class="row-md-12">     
+              <div class="col-md-6">
+                     <p style="font-size:20px">User Id:</p>
+                     <input type="text" name="username" class="form-control" style="font-size:20px" required><br><br>
+               </div>    
+                  <div class="col-md-6">
+                    <p style="font-size:20px">Password:</p>
+                      <input type="password" name="password" class="form-control" style="font-size:20px" required><br><br><br>
+                  </div>    
+             </div>
+
+
+             <div class="col-md-12">         
+              <select class="form-control" name="role" style="font-size:20px">
+                  [[~ model.result:temp]]
+                   <option value=[[=temp.id]]>[[=temp.name]]</option>
+                  [[~]]
+               </select><br><br>
+             </div>   
+
+
+        <div class="row-md-12">
+              <div class="col-md-6">
+                 <button type="submit" class="btn btn-primary" value="Register">Register</button>
+              </div>
+              <div class="col-md-6">
+                  <a type="submit" class="btn btn-success" href="/login" style="color:white">Go to Login</a>
+                </div>
+        </div>       
+                
+    </form>
+      </div>
+
+
+  
+
+    
+
+  </body>
+</html>

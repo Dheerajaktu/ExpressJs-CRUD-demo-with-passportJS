@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title ]]</title>
+       <script type="text/javascripts" src="/javascripts/bootstrap.js"></script>
+       <link rel="stylesheet" type="text/css" href="/stylesheets/min.css">
+  </head>
+  <body>
+
+
+  <div class="container" style="background-color:silver">
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">REGISTER WITH EMPLOYEE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="registerWithEmp/loginWithEmp">Go To Employee Login</a></li>
+      
+    </ul>
+  </div>
+</nav>
+ 
+    <form action="registerWithEmp/registerWithEmp" method="post">
+    <legend><mark>Register Here(Employee Portal)</mark></legend>
+    <br>
+           <div class="row-md-10">
+                      <div class="col-md-5">
+                      <p style="font-size:20px">Username:</p>
+                       <input type="text" name="firstName" required class="form-control" style="font-size:20px"><br><br>
+                       </div>
+                        <div class="col-md-5">
+                      <p style="font-size:20px">Username:</p>
+                       <input type="text" name="lastName" required class="form-control" style="font-size:20px"><br><br>
+                      </div>
+             </div>         
+
+           <div class="row-md-10">
+                     <div class="col-md-5">
+                  <p style="font-size:20px">Username:</p>
+                     <input type="text" name="username" required class="form-control" style="font-size:20px"><br><br>
+                     </div>
+                     <div class="col-md-5">
+                    <p style="font-size:20px">Username:</p>
+                     <input type="password" name="password" required class="form-control" style="font-size:20px"><br><br><br>
+                     </div>
+           </div>       
+           <br><br>
+           <div class="row-md-10">
+                   <input class="btn btn-success" type="submit" value="Register">
+      
+           </div>        
+  </form>
+
+
+  </body>
+</html>

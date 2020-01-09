@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title ]]</title>
+  </head>
+  <body>
+  <center>
+  <h1>Oops Login Fail!! </h1>
+  <h2><button href="#">Go to Login</button></h2>
+    <div style="width:400px;height:auto;border-radius:5px;background-color:dodgerblue;margin-top:100px;">
+    </div>
+     </center>
+  </body>
+  </html>

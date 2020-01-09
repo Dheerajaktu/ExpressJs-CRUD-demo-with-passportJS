@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>[[= layout.title]]</title>
+  </head>
+  <body>
+  <center>
+   <div style="width:500px;height:auto;border-radius:5px;background-color:#FF7F50;margin-top:100px;">
+  <h1>WELCOME TO EMPLOYEE PORTAL </h1>
+    <h1>Login Success!!</h><br>
+    <a href="/showEmpData">Show Employee Details Here</a><br><br><br>    
+     <a href="/login">Go to Login</a>|<a href="/">Home</a>
+        </div>
+      </center>
+  </body>
+  </html>
